@@ -21,7 +21,7 @@ update personas2 set edad = case when edad < 85 then edad + 15 else 00 end where
 rollback;
 ```
 
-*Query 2 Personas 2*
+*Query2 Personas 2*
 ```sh
 begin;
 update personas2 set edad = (case when personas1.edad < 85 then personas2.edad + 15 else 00 end) where exists (select from ruts where personas2.rut = ruts.rut);
