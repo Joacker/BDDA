@@ -31,11 +31,17 @@ begin;
 update datos set nombre = ’W’ where codigo = 3;
 select nombre from datos where codigo = 3;
 ```
-*Ya realizadas, se procede a cerrar la transacción de la C1.*
-```sql
-commit;
-```
 ```sql
 begin;
 select nombre from datos where codigo = 3;
 ```
+*Ya realizadas, se procede a cerrar la transacción de la C1.*
+```sql
+commit;
+```
+*En la segunda consola se vuelve a consultar el NOMBRE y posterior se cierra la transacción con COMMIT*
+```sql
+select nombre from datos where codigo = 3;
+commit;
+```
+## Paso 3
