@@ -5,7 +5,7 @@
 cat diezmil.txt | sort | uniq > diezmil fixed.txt
 ```
 
-*comando que elimina el rut correspondiente al car´acter ‘‘V’’*
+*comando que elimina el rut correspondiente al carácter ‘‘V’’*
 *realizando un salto de linea al encontrarlo.*
 ```bash
 sed ’/V/d’ -i diezmil
