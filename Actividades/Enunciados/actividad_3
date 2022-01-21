@@ -1,0 +1,30 @@
+
+Tenemos dos tablas: PERSONAS1 y PERSONAS2, las que
+fueron creadas en las actividades previas.
+
+En el archivo diezmil hay 10000 RUT y se desea eliminar
+de la base de datos los registros correspondientes a ellos.
+
+Las acciones a realizar son las siguientes.
+
+1. Eliminar el indice de PERSONAS1 (si aun lo tuviera) y
+   confirmar que PERSONAS2 tenga su llave primaria
+
+2. En PERSONAS1, eliminar los registros asociados a los
+   RUT indicados midiendo el tiempo que demora el proceso
+
+3. Repetir el mismo proceso en PERSONAS2
+
+4. Analizar los tiempos obtenidos e indicar si hay algun
+   metodo mas eficiente para realizar la eliminacion
+
+
+OBSERVACION IMPORTANTE
+----------------------
+Una vez que las filas son borradas ya no pueden ser recuperadas,
+por lo tanto se sugiere hacer la eliminacion en una transaccion
+de base de datos.
+
+Para ello, debe abrir la transaccion con la sentencia BEGIN,
+ejecutar la eliminacion y hacer ROLLBACK al finalizar. De 
+esta forma, se deshace automaticamente la eliminacion hecha.

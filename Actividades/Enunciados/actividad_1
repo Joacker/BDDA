@@ -1,0 +1,33 @@
+En todas las actividades del semestre, se debe usar el sistema
+de bases de datos postgres. Por lo tanto, la primera asignacion
+es instalarlo en el computador en el que se vaya a trabajar.
+
+Fase inicial
+------------
+1. Crear una base de datos que contenga una tabla PERSONAS1
+   con los atributos
+
+     RUT	  10 digitos enteros
+     Nombre	  50 caracteres
+     Edad	   2 digitos enteros
+     Direccion	 100 caracteres
+
+2. Crear PERSONAS2 igual que (1) pero con Primary key RUT
+
+3. Insertar en PERSONAS1 los registros contenidos en el
+   archivo "cincomil" y tomar el tiempo de ejecucion
+
+4. Indexar PERSONAS1 por RUT y tomar el tiempo requerido
+
+5. Repetir el paso (3) en PERSONAS2
+
+6. Comparar los tiempos de ejecucion de (3), (4) y (5)
+
+Fase final
+----------
+7. Repetir los pasos (3), (4) y (5) para el archivo "millones50"
+
+8. Analizar los resultados obtenidos para ambos archivos,
+   indicar las diferencias en cuanto a los procesos hechos y
+   determinar cual es el metodo mas eficiente para cargar un
+   archivo de gran volumen.

@@ -1,0 +1,22 @@
+Ya tenemos dos tablas PERSONAS1 y PERSONAS2.
+
+En el archivo diezmil hay 10000 RUT y se desea
+recuperar la informacion de esas 10000 personas
+
+1. Eliminar el indice de PERSONAS1
+
+2. En PERSONAS1, recuperar la direccion de las 10000 personas y
+   grabarlas en un archivo, midiendo el tiempo que demora el
+   proceso
+
+3. Repetir la misma consulta en PERSONAS2
+
+4. Analizar los resultados obtenidos en ambos casos e indicar
+   las diferencias que hay en ambos procesos
+
+5. Determinar el factor de bloqueo que esta usando el sistema
+   para las tablas PERSONA's
+
+6. En base a los resultados anteriores, calcular los parametros
+   de acceso a la base de datos
+

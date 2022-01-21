@@ -1,0 +1,14 @@
+A continuacion, analizaremos la consistencia e integridad en un sistema
+de base de datos. Sin embargo, esta vez no tenemos una lista de pasos
+a realizar, sino que queda abierto a la creatividad de cada uno,
+sujeto a las siguientes verificaciones:
+
+a) un atributo siempre tenga un valor (NOT NULL)
+b) un atributo este en un rango de valores (CHECK)
+c) que haya consistencia entre dos tablas (FOREIGN KEY)
+d) que se cumplan condiciones que relacionen atributos de
+   2 o mas tablas (ASSERTION)
+e) que se cumplan condiciones especiales asociadas a las
+   operaciones de manejo de datos (TRIGGERS)
+
+Para ello, Ud. debe crear los objetos (tablas, indices, procedimientos, funciones) que sean requeridos para demostrar lo anterior.

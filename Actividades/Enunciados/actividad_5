@@ -1,0 +1,111 @@
+Uno de los problemas tipicos que debemos enfrentar en bases de datos
+de gran volumen es el acceso concurrente de multiples usuarios a la
+misma informacion almacenada en ella.
+
+Ello produce contencion en el acceso a los datos, lo que se traduce
+en tiempos de respuesta cada vez mas largos.
+
+En esta actividad revisaremos los problemas que pueden ocurrir al
+haber acceso concurrente a la base de datos.
+
+Para preparar el escenario, se debe crear una tabla de nombre
+DATOS que tenga dos atributos identificados como CODIGO y NOMBRE,
+respectivamente, e insertar 10 filas con CODIGOs del 1 al 10 y
+NOMBREs cualesquiera a vuestra eleccion.
+
+Adicionalmente, debe tener 2 consolas (C1 y C2) conectadas a la bdd.
+Ambas consolas deben estar visibles en todo momento para que pueda
+observar simultaneamente lo que esta ocurriendo en ellas.
+
+NOTA: En esta actividad es de vital importancia que siga los pasos
+  tal como estan indicados. Cualquier modificacion a la secuencia
+  indicada no va a producir los resultados esperados. Ademas, debe
+  estar observando la actividad de ambas consolas cuando haga alguna
+  operacion en una de ellas.
+
+1. En C1, actualizar el NOMBRE de la fila de CODIGO 5.
+   En C2, actualizar a un NOMBRE diferente al anterior el NOMBRE de
+     la fila de CODIGO 5.
+   En C1, consultar el NOMBRE de la fila de CODIGO 5.
+   En C2, consultar el NOMBRE de la fila de CODIGO 5.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+2. En C1, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 3. A continuacion, consultar el NOMBRE de
+     la fila de CODIGO 3.
+   En C2, abrir una transaccion (BEGIN) y consultar el NOMBRE de
+     la fila de CODIGO 3.
+   En C1, cerrar la transaccion con COMMIT.
+   En C2, volver a consultar el NOMBRE de la fila de CODIGO 3 y
+     cerrar la transaccion con COMMIT.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+3. En C1, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 7.
+   En C2, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 7 a un NOMBRE diferente.
+   En C1, volver a actualizar el NOMBRE de la fila de CODIGO 7 a
+     un NOMBRE diferente a los anteriores y cerrar la transaccion
+     con COMMIT.
+   En C2, cerrar la transaccion con COMMIT.
+   En C1, consultar el NOMBRE de la fila de CODIGO 7.
+   En C2, consultar el NOMBRE de la fila de CODIGO 7.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+4. En C1, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 4.
+   En C2, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 6.
+   En C1, consultar por el NOMBRE de la fila de CODIGO 6.
+   En C2, consultar por el NOMBRE de la fila de CODIGO 4.
+   En C1, cerrar la transaccion con COMMIT.
+   En C2, cerrar la transaccion con COMMIT.
+   En C1, consultar por el NOMBRE de la fila de CODIGO 6.
+   En C2, consultar por el NOMBRE de la fila de CODIGO 4.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+5. En C1, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 2.
+   En C2, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 8.
+   En C1, actualizar el NOMBRE de la fila de CODIGO 8 a un NOMBRE
+     diferente a los anteriores.
+   En C2, actualizar el NOMBRE de la fila de CODIGO 2 a un NOMBRE
+     diferente a los anteriores.
+   En C1, cerrar la transaccion con COMMIT.
+   En C2, cerrar la transaccion con COMMIT.
+   En C1, consultar por el NOMBRE de la fila de CODIGO 8.
+   En C2, consultar por el NOMBRE de la fila de CODIGO 2.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+6. En C1, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 1.
+   En C2, abrir una transaccion (BEGIN) y actualizar el NOMBRE de
+     la fila de CODIGO 1 a un NOMBRE diferente.
+   En C1, actualizar el NOMBRE de la fila de CODIGO 9 a un NOMBRE
+     diferente a los anteriores.
+   En C2, actualizar el NOMBRE de la fila de CODIGO 9 a un NOMBRE
+     diferente a los anteriores.
+   En C1, cerrar la transaccion con COMMIT.
+   En C2, cerrar la transaccion con COMMIT.
+   En C1, consultar por el NOMBRE de la fila de CODIGO 9.
+   En C2, consultar por el NOMBRE de la fila de CODIGO 1.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+7. En C1, abrir una transaccion (BEGIN) y consultar el NOMBRE de la
+     fila de CODIGO 10 usando la opcion de actualizacion
+     (SELECT ... FOR UPDATE).
+   En C2, consultar normalmente por el NOMBRE de la fila de CODIGO 10
+     y actualizarlo a un NOMBRE diferente.
+   En C1, consultar normalmente por el NOMBRE de la fila de CODIGO 10
+     y actualizarlo a un NOMBRE diferente a los anteriores.
+   En C2, consultar normalmente por el NOMBRE de la fila de CODIGO 10.
+   En C1, cerrar la transaccion con COMMIT.
+   En C1, consultar normalmente por el NOMBRE de la fila de CODIGO 10.
+   En C2, consultar normalmente por el NOMBRE de la fila de CODIGO 10.
+   Registrar cuidadosamente lo ocurrido en ambas consolas.
+
+8. Hacer un analisis critico de lo observado en cada uno de los pasos
+   de esta actividad, senalando lo que se pretendia lograr en cada una
+   de ellas, que fue lo que se observo y explicando por que ocurrio lo
+   que ocurrio.

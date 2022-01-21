@@ -1,0 +1,33 @@
+En esta oportunidad, trabajaremos con grandes volúmenes de datos
+y trataremos de optimizar las consultas típicas al sistema.
+
+En primer lugar, debemos preparar el ambiente de trabajo.
+Para ello, hay que crear las siguientes 3 tablas:
+
+1. CLIENTES: Codigo, Rut, Nombre, Direccion
+   debe contener 5 millones de filas, extraídas de PERSONAS
+   con las que hemos trabajado
+
+2. PRODUCTOS: Codigo, Nombre, Precio
+   debe contener 1000 productos diferentes
+
+3. VENTAS: Codigo_cliente, Codigo_producto, Cantidad
+   debe contener 200 millones de filas, con información consistente
+   de CLIENTES y PRODUCTOS, de manera que a cada cliente le hayamos 
+   vendido uniformemente hasta un máximo de 40 productos diferentes
+   y cantidades variables entre 1 y 10.
+
+Luego, debemos responder a las siguientes consultas:
+1. Nombre de los clientes que nos han generado el mayor ingreso
+   acumulado por las ventas que le hemos hecho
+2. Nombre del producto menos vendido
+3. Nombre de los productos comprados por un cliente dado su Rut
+
+Se debe medir el tiempo de ejecución en los siguientes escenarios:
+1. acceso directo sobre las tablas, sin objetos adicionales
+2. acceso sobre un diseño optimizado de la base de datos, es
+   decir, con los objetos (indices, vistas, funciones, etc.)
+   que mejoren el tiempo de respuesta de las consultas indicadas.
+
+El informe debe contener las razones por las cuales los objetos usados
+han posibilitado mejorar el tiempo de respuesta de las consultas.

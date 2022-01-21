@@ -1,0 +1,38 @@
+Ahora corresponde ver como garantizar la independencia de datos usando
+VISTAS (VIEW).
+
+Ya se tiene la tabla PERSONAS con los atributos Rut, Nombre y Edad y se
+debe crear la tabla EDADES con los atributos Edad y Descripción, en la
+que Edad es el numero y Descripción es el mismo numero expresado en letras.
+
+1. Crear la tabla EDADES con 100 filas, variando la Edad desde
+   1 hasta 100 y poniendo la Descripción correspondiente.
+
+2. Definir la vista (CREATE VIEW) JOVENES que incluye a las
+   PERSONAS con edades menores a 30 y la descripción respectiva
+   de la edad. Los atributos de esta vista deben ser los mismos
+   de PERSONAS mas la descripción correspondiente de EDADES.
+   Hacer lo mismo para la vista ADULTOS (entre 30 y 60) y la
+   vista TERCERA_EDAD con los mayores de 60.
+
+3. Agrupar JOVENES contando cuantas filas hay en cada una
+   de las Descripciones, tomando el tiempo de este proceso.
+   Repetir la misma agrupación en ADULTOS y TERCERA_EDAD.
+
+4. Indexar la tabla EDADES por el atributo Edad, repetir el
+   paso 3 y comparar los tiempos obtenidos en ambos.
+
+5. Obtener las mismas agrupaciones anteriores (paso 3)
+   trabajando directamente con las tablas PERSONAS y EDADES,
+   en lugar de usar las vistas. Recuerde medir los tiempos.
+
+6. A partir de la tabla PERSONAS, crear las tablas JOVEN, ADULTO
+   y TERCERA, con los mismos atributos de las vistas respectivas
+   y cargar los datos correspondientes.
+
+7. Repetir el paso 3, esta vez con las nuevas tablas en lugar de
+   los objetos anteriores (tablas y vistas). No olvidar medir el
+   tiempo.
+
+8. Comparar lor resultados obtenidos y explicar a que se deben
+   las diferencias observadas.

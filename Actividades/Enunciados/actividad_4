@@ -1,0 +1,38 @@
+
+Tenemos dos tablas PERSONAS1 y PERSONAS2 creadas en una
+actividad previa, con 50 millones de registros aproximadamente
+cada una.  La primera de ellas sin  ningun tipo de indices,
+mientras que la segunda tiene RUT como llave primaria.
+
+En el archivo diezmil hay 10000 RUT y se desea actualizar la
+edad de dichos registros, incrementandola en 15 y teniendo
+cuidado de no sobrepasar la edad 99. En caso de exceder
+dicho valor, se debe poner 00.
+
+0. Asegurarse de que las tablas PERSONAS1 y PERSONAS2 cumplan
+   con lo indicado
+
+1. En PERSONAS1, actualizar los RUT's midiendo el tiempo que
+   demora el proceso
+
+2. Repetir el mismo proceso en PERSONAS2
+
+3. Analizar los tiempos obtenidos y explicar las diferencias de
+   rendimiento en ambos casos. Ademas, indicar como se podria
+   optimizar este proceso.
+
+4. Comparar los resultados obtenidos con los tiempos de las
+   actividades 2 y 3 y analizar las diferencias explicando a
+   que se deben.
+
+
+OBSERVACION IMPORTANTE
+----------------------
+Una vez que las filas son actualizadas ya no es posible recuperar
+la edad previa, por lo tanto, al igual que en el caso de la
+eliminacion anterior, se sugiere hacer la actualizacion en una
+transaccion de base de datos.
+
+Para ello, se debe abrir la transaccion con la sentencia BEGIN,
+hacer las actualizaciones y, al finalizar, hacer ROLLBACK para
+cerrar la transaccion y descartar las actualizaciones hechas.
