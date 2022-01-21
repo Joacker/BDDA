@@ -1,3 +1,4 @@
+```sql
 create table datos(
     codigo numeric(2),
     nombre char(1)
@@ -12,3 +13,4 @@ insert into datos (codigo, nombre) values (7,’G’);
 insert into datos (codigo, nombre) values (8,’H’);
 insert into datos (codigo, nombre) values (9,’J’);
 insert into datos (codigo, nombre) values (10,’K’);
+```
